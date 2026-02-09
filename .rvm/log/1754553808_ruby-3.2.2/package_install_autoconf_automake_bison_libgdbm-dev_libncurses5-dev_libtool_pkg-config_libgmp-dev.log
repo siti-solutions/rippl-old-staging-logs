@@ -1,0 +1,149 @@
+[2025-08-07 08:03:33] requirements_debian_libs_install
+requirements_debian_libs_install () 
+{ 
+    __rvm_try_sudo apt-get --no-install-recommends --yes install "$@" || return $?
+}
+current path: /home/ubuntu
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/ubuntu/.rvm/bin
+command(9): requirements_debian_libs_install autoconf automake bison libgdbm-dev libncurses5-dev libtool pkg-config libgmp-dev
+++ __rvm_try_sudo apt-get --no-install-recommends --yes install autoconf automake bison libgdbm-dev libncurses5-dev libtool pkg-config libgmp-dev
+++ typeset -a command_to_run
+++ typeset sudo_path sbin_path missing_paths
+++ command_to_run=("$@")
+++ ((  UID == 0  ))
+++ case "$rvm_autolibs_flag_number" in
+++ is_a_function __rvm_sudo
+++ typeset -f __rvm_sudo
+++ missing_paths=
+++ for sbin_path in /sbin /usr/sbin /usr/local/sbin
+++ [[ -d /sbin ]]
+++ [[ :/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/ubuntu/.rvm/bin: != *\:\/\s\b\i\n\:* ]]
+++ for sbin_path in /sbin /usr/sbin /usr/local/sbin
+++ [[ -d /usr/sbin ]]
+++ [[ :/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/ubuntu/.rvm/bin: != *\:\/\u\s\r\/\s\b\i\n\:* ]]
+++ for sbin_path in /sbin /usr/sbin /usr/local/sbin
+++ [[ -d /usr/local/sbin ]]
+++ [[ :/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/ubuntu/.rvm/bin: != *\:\/\u\s\r\/\l\o\c\a\l\/\s\b\i\n\:* ]]
+++ [[ -n '' ]]
+++ command_to_run=(__rvm_sudo -p "%p password required for '$*': " "${command_to_run[@]}")
+++ __rvm_sudo -p '%p password required for '\''apt-get --no-install-recommends --yes install autoconf automake bison libgdbm-dev libncurses5-dev libtool pkg-config libgmp-dev'\'': ' apt-get --no-install-recommends --yes install autoconf automake bison libgdbm-dev libncurses5-dev libtool pkg-config libgmp-dev
+++ command sudo -p '%p password required for '\''apt-get --no-install-recommends --yes install autoconf automake bison libgdbm-dev libncurses5-dev libtool pkg-config libgmp-dev'\'': ' apt-get --no-install-recommends --yes install autoconf automake bison libgdbm-dev libncurses5-dev libtool pkg-config libgmp-dev
+Reading package lists...
+Building dependency tree...
+Reading state information...
+libncurses-dev is already the newest version (6.4+20240113-1ubuntu2).
+libncurses-dev set to manually installed.
+The following packages were automatically installed and are no longer required:
+  libcares2 node-busboy node-cjs-module-lexer node-undici node-xtend
+  python3-cliapp python3-markdown python3-ttystatus python3-zombie-imp
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  autotools-dev libgmpxx4ldbl libpkgconf3 m4 pkgconf pkgconf-bin
+Suggested packages:
+  autoconf-archive gnu-standards autoconf-doc gettext bison-doc gmp-doc
+  libgmp10-doc libmpfr-dev libtool-doc gfortran | fortran95-compiler gcj-jdk
+  m4-doc
+Recommended packages:
+  libltdl-dev
+The following NEW packages will be installed:
+  autoconf automake autotools-dev bison libgdbm-dev libgmp-dev libgmpxx4ldbl
+  libpkgconf3 libtool m4 pkg-config pkgconf pkgconf-bin
+0 upgraded, 13 newly installed, 0 to remove and 0 not upgraded.
+Need to get 2642 kB of archives.
+After this operation, 10.4 MB of additional disk space will be used.
+Get:1 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble/main amd64 m4 amd64 1.4.19-4build1 [244 kB]
+Get:2 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble/main amd64 autoconf all 2.71-3 [339 kB]
+Get:3 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble/main amd64 autotools-dev all 20220109.1 [44.9 kB]
+Get:4 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble/main amd64 automake all 1:1.16.5-1.3ubuntu1 [558 kB]
+Get:5 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble/main amd64 bison amd64 2:3.8.2+dfsg-1build2 [749 kB]
+Get:6 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libgdbm-dev amd64 1.23-5.1build1 [116 kB]
+Get:7 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgmpxx4ldbl amd64 2:6.3.0+dfsg-2ubuntu6.1 [9888 B]
+Get:8 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgmp-dev amd64 2:6.3.0+dfsg-2ubuntu6.1 [340 kB]
+Get:9 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libpkgconf3 amd64 1.8.1-2build1 [30.7 kB]
+Get:10 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libtool all 2.4.7-7build1 [166 kB]
+Get:11 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble/main amd64 pkgconf-bin amd64 1.8.1-2build1 [20.7 kB]
+Get:12 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble/main amd64 pkgconf amd64 1.8.1-2build1 [16.8 kB]
+Get:13 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble/main amd64 pkg-config amd64 1.8.1-2build1 [7264 B]
+Fetched 2642 kB in 0s (61.5 MB/s)
+Selecting previously unselected package m4.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 115172 files and directories currently installed.)
+Preparing to unpack .../00-m4_1.4.19-4build1_amd64.deb ...
+Unpacking m4 (1.4.19-4build1) ...
+Selecting previously unselected package autoconf.
+Preparing to unpack .../01-autoconf_2.71-3_all.deb ...
+Unpacking autoconf (2.71-3) ...
+Selecting previously unselected package autotools-dev.
+Preparing to unpack .../02-autotools-dev_20220109.1_all.deb ...
+Unpacking autotools-dev (20220109.1) ...
+Selecting previously unselected package automake.
+Preparing to unpack .../03-automake_1%3a1.16.5-1.3ubuntu1_all.deb ...
+Unpacking automake (1:1.16.5-1.3ubuntu1) ...
+Selecting previously unselected package bison.
+Preparing to unpack .../04-bison_2%3a3.8.2+dfsg-1build2_amd64.deb ...
+Unpacking bison (2:3.8.2+dfsg-1build2) ...
+Selecting previously unselected package libgdbm-dev:amd64.
+Preparing to unpack .../05-libgdbm-dev_1.23-5.1build1_amd64.deb ...
+Unpacking libgdbm-dev:amd64 (1.23-5.1build1) ...
+Selecting previously unselected package libgmpxx4ldbl:amd64.
+Preparing to unpack .../06-libgmpxx4ldbl_2%3a6.3.0+dfsg-2ubuntu6.1_amd64.deb ...
+Unpacking libgmpxx4ldbl:amd64 (2:6.3.0+dfsg-2ubuntu6.1) ...
+Selecting previously unselected package libgmp-dev:amd64.
+Preparing to unpack .../07-libgmp-dev_2%3a6.3.0+dfsg-2ubuntu6.1_amd64.deb ...
+Unpacking libgmp-dev:amd64 (2:6.3.0+dfsg-2ubuntu6.1) ...
+Selecting previously unselected package libpkgconf3:amd64.
+Preparing to unpack .../08-libpkgconf3_1.8.1-2build1_amd64.deb ...
+Unpacking libpkgconf3:amd64 (1.8.1-2build1) ...
+Selecting previously unselected package libtool.
+Preparing to unpack .../09-libtool_2.4.7-7build1_all.deb ...
+Unpacking libtool (2.4.7-7build1) ...
+Selecting previously unselected package pkgconf-bin.
+Preparing to unpack .../10-pkgconf-bin_1.8.1-2build1_amd64.deb ...
+Unpacking pkgconf-bin (1.8.1-2build1) ...
+Selecting previously unselected package pkgconf:amd64.
+Preparing to unpack .../11-pkgconf_1.8.1-2build1_amd64.deb ...
+Unpacking pkgconf:amd64 (1.8.1-2build1) ...
+Selecting previously unselected package pkg-config:amd64.
+Preparing to unpack .../12-pkg-config_1.8.1-2build1_amd64.deb ...
+Unpacking pkg-config:amd64 (1.8.1-2build1) ...
+Setting up m4 (1.4.19-4build1) ...
+Setting up autotools-dev (20220109.1) ...
+Setting up libpkgconf3:amd64 (1.8.1-2build1) ...
+Setting up libgmpxx4ldbl:amd64 (2:6.3.0+dfsg-2ubuntu6.1) ...
+Setting up pkgconf-bin (1.8.1-2build1) ...
+Setting up autoconf (2.71-3) ...
+Setting up bison (2:3.8.2+dfsg-1build2) ...
+update-alternatives: using /usr/bin/bison.yacc to provide /usr/bin/yacc (yacc) in auto mode
+Setting up libgdbm-dev:amd64 (1.23-5.1build1) ...
+Setting up automake (1:1.16.5-1.3ubuntu1) ...
+update-alternatives: using /usr/bin/automake-1.16 to provide /usr/bin/automake (automake) in auto mode
+Setting up libgmp-dev:amd64 (2:6.3.0+dfsg-2ubuntu6.1) ...
+Setting up libtool (2.4.7-7build1) ...
+Setting up pkgconf:amd64 (1.8.1-2build1) ...
+Setting up pkg-config:amd64 (1.8.1-2build1) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.5) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Processing triggers for install-info (7.1-3build2) ...
+
+Pending kernel upgrade!
+Running kernel version:
+  6.8.0-1029-aws
+Diagnostics:
+  The currently running kernel version is not the expected kernel version 6.14.0-1010-aws.
+
+Restarting the system to load the new kernel will not be handled automatically, so you should consider rebooting.
+
+Restarting services...
+
+Service restarts being deferred:
+ /etc/needrestart/restart.d/dbus.service
+ systemctl restart getty@tty1.service
+ systemctl restart networkd-dispatcher.service
+ systemctl restart serial-getty@ttyS0.service
+ systemctl restart systemd-logind.service
+ systemctl restart unattended-upgrades.service
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.

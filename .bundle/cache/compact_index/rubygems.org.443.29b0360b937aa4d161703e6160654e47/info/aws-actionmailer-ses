@@ -1,0 +1,3 @@
+---
+0.1.0 actionmailer:>= 7.1.0,aws-sdk-ses:>= 1.50.0&~> 1,aws-sdk-sesv2:>= 1.34.0&~> 1|checksum:075e738bcbb6ddd587e34a6aec72daaf94d973962abb9891fc2b6e5cc3e92786,ruby:>= 2.7
+1.0.0 actionmailer:>= 7.1.0,aws-sdk-ses:>= 1.50.0&~> 1,aws-sdk-sesv2:>= 1.34.0&~> 1|checksum:0a16f1413dba0bf96a6bb065ebf353c7c8a107534af5146a31b8243b9e4d4c18,ruby:>= 2.7

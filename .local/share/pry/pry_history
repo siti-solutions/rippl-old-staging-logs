@@ -1,0 +1,200 @@
+failure("Phone number is required") if @phone.blank?
+cache_otp
+send_slack_notification if Rails.env.development?
+send_slack_notification
+cache_otp
+send_slack_notification if Rails.env.development?
+exot
+exit
+content_dataum = Content.active
+category_details = fetch_category_details(content_dataum.includes(:category))
+content_at_top = if @id.present?
+                          content_dataum.find_by(id: @id)
+      elsif @category_id.present?
+                          content_dataum.find_by(category_id: @category_id)
+      else
+                          nil
+      end
+if @user_id.present?
+        contents = content_dataum.where(content_type: "video", user_id: @user_id).where.not(id: @id).order(created_at: :desc)
+      else
+        contents = content_dataum.where(content_type: "video").where.not(id: @id).order(created_at: :desc)
+      end
+similar_contents = (content_at_top.present? && content_at_top&.category_id.present?) ? contents.where(category_id: content_at_top&.category_id) : []
+      contents_merge = [ content_at_top ].compact + similar_contents + contents.to_a.shuffle
+      @contents_array = contents_merge.flatten.compact.uniq
+      @contents = WillPaginate::Collection.create(@page, @limit, @contents_array.size) do |pager|
+        pager.replace(@contents_array[pager.offset, pager.per_page].to_a)
+      end
+@contents
+first_content = @contents.first
+ rest_contents = @contents[1..-1].to_a.shuffle
+shuffled_contents = [ first_content ] + rest_contents.select { |t| similar_contents.include?(t.id) }.to_a.shuffle + rest_contents.select { |t| similar_contents.exclude?(t.id) }
+shuffled_contents.compact.flatten.each do |content|
+        content_video = fetch_video(content)
+        next if content_video.blank?
+
+        caption = if content.caption.present?
+                    content.caption
+        else
+                    fetch_random_caption
+        end
+        data.push({
+                    url: content.url,
+                    content_id: content.id,
+                    content_type: content.content_type,
+                    video: content_video,
+                    category: content&.category.name,
+                    category_id: content&.category_id,
+                    caption:,
+                    product_details: fetch_product_data(content),
+                    creator_details: fetch_creator_data(content.user),
+                    is_liked: fetch_is_liked(content),
+                    like_count:  fetch_like_count(content, "Content"),
+                    is_saved: fetch_is_saved(content),
+                    saved_count: fetch_saved_count(content)
+                  })
+      end
+data
+shuffled_contents
+shuffled_contents.compact.flatten
+shuffled_contents.compact.flatten[0]
+content = shuffled_contents.compact.flatten[0]
+content_video = fetch_video(content)
+exit
+prod.old_product_images
+prod.old_product_images.first
+prod.old_product_images.first.image.url
+prod.old_product_images.first.image
+prod.old_product_images.first.images
+prod.old_product_images.first.image
+|old_product_image = prod.old_product_images[0]
+old_product_image = prod.old_product_images[0]
+product_image = ProductVariantImage.create!(
+                product_variant_id: p_v.id,
+                name: "image"
+              )
+create_image(old_product_image, product_image, "ProductImage", "ProductImage")
+def create_image(old_record, new_record, old_record_type, new_record_type, attachment_type = "image")
+    binding.pry
+    old_attachment = OldAttachment.find_by(
+      record_id: old_record.id,
+      record_type: old_record_type,
+      name: attachment_type
+    )
+    return true if old_attachment.blank?
+
+    old_blob = OldBlob.find_by(id: old_attachment[:blob_id])
+    return true if old_blob.blank?
+
+    storage = ActiveStorage::Attachment.find_or_initialize_by(
+      name: old_attachment.name,
+      record_type: new_record_type,
+      record_id: new_record.id,
+      blob_id: copy_blob(old_blob).id
+    )
+    storage.save!
+  end
+create_image(old_product_image, product_image, "ProductImage", "ProductImage")
+old_attachment = OldAttachment.find_by(
+      record_id: old_record.id,
+      record_type: old_record_type,
+      name: attachment_type
+    )
+old_attachment
+old_attachment.blank?
+old_blob = OldBlob.find_by(id: old_attachment[:blob_id])
+old_blob.blank?
+storage = ActiveStorage::Attachment.find_or_initialize_by(
+      name: old_attachment.name,
+      record_type: new_record_type,
+      record_id: new_record.id,
+      blob_id: copy_blob(old_blob).id
+    )
+storage.save!
+new_record_type
+storage.save!
+storage.save!
+new_record.id
+exit
+p
+pp_v
+p_v
+p.blank? || p_v.blank? || p.product_variants.first.product_variant_images.first&.image.present?
+exit
+p.blank? || p_v.blank? || p.product_variants.first.product_variant_images.first&.image.present?
+old_product_image = prod.old_product_images
+product_image = ProductVariantImage.create!(
+                product_variant_id: p_v.id,
+                name: "image"
+              )
+create_image(old_product_image, product_image, "ProductImage", "ProductImage")
+def create_image(old_record, new_record, old_record_type, new_record_type, attachment_type = "image")
+    binding.pry
+    old_attachment = OldAttachment.find_by(
+      record_id: old_record.id,
+      record_type: old_record_type,
+      name: attachment_type
+    )
+    return true if old_attachment.blank?
+
+    old_blob = OldBlob.find_by(id: old_attachment[:blob_id])
+    return true if old_blob.blank?
+
+    storage = ActiveStorage::Attachment.find_or_initialize_by(
+      name: old_attachment.name,
+      record_type: 'ProductVariantImage',
+      record_id: new_record.id,
+      blob_id: copy_blob(old_blob).id
+    )
+    storage.save!
+  end
+create_image(old_product_image, product_image, "ProductImage", "ProductImage")
+old_record
+old_attachment = OldAttachment.find_by(
+      record_id: old_record.id,
+      record_type: old_record_type,
+      name: attachment_type
+    )
+old_record
+old_record.id
+prod.old_product_images
+exit
+old_attachment = OldAttachment.find_by(
+      record_id: old_record.id,
+      record_type: old_record_type,
+      name: attachment_type
+    )
+old_attachment.blank?
+old_blob = OldBlob.find_by(id: old_attachment[:blob_id])
+old_blob.blank?
+storage = ActiveStorage::Attachment.find_or_initialize_by(
+      name: old_attachment.name,
+      record_type: 'ProductVariantImage',
+      record_id: new_record.id,
+      blob_id: copy_blob(old_blob).id
+    )
+storage.save!
+new_record.id
+copy_blob(old_blob).id
+ProductVariantImage.last
+p_v = ProductVariantImage.last
+pv
+p_v
+p_v.as_json
+p_v = ProductVariantImage.where(product_variant_id: 2176)
+p = Product.where(id: [
+  742, 741, 740, 739, 738, 737, 736, 735, 734, 733,
+  732, 731, 730, 729, 728, 727, 726, 725, 724, 713,
+  712, 711, 710, 709, 708, 707, 706, 705, 704, 703,
+  702, 701, 700, 699, 698, 697, 696, 695, 694, 693,
+  692, 691, 690, 689, 688, 687, 686, 685, 684, 683,
+  682, 681, 680, 679, 678, 677, 676, 675, 674, 673,
+  672, 671, 670, 669, 668, 667, 666, 665, 664, 663,
+  662, 661, 660, 659, 658, 541, 540, 539, 538, 537,
+  536, 535, 534, 533, 532, 531, 530, 529, 528, 527,
+  526, 525, 524, 523, 522, 521, 520, 519, 518, 517,
+  516, 311, 310, 309, 308, 307, 306, 305, 304, 303,
+  302, 301, 300, 299, 298, 297, 296, 295
+])
+exit

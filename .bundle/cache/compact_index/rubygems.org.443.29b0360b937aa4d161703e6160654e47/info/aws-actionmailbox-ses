@@ -1,0 +1,2 @@
+---
+0.1.0 actionmailbox:>= 7.1.0,aws-sdk-s3:>= 1.123.0&~> 1,aws-sdk-sns:>= 1.61.0&~> 1|checksum:3fd4167cdbd456a325b2d0622482bd114741ac535f944c1c11e532eda6043a6d,ruby:>= 2.7

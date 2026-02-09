@@ -1,0 +1,28 @@
+current directory: /home/travis/.rvm/rubies/ruby-3.4.4/lib/ruby/gems/3.4.0/gems/executable-hooks-1.7.1/ext/wrapper_installer
+/home/travis/.rvm/rubies/ruby-3.4.4/bin/ruby extconf.rb
+bundler 2.6.7
+debug 1.10.0
+erb 4.0.4
+irb 1.14.3
+racc 1.8.1
+rake 13.2.1
+rbs 3.8.0
+rdoc 6.10.0
+syntax_suggest 2.0.2
+typeprof 0.30.1
+
+current directory: /home/travis/.rvm/rubies/ruby-3.4.4/lib/ruby/gems/3.4.0/gems/executable-hooks-1.7.1/ext/wrapper_installer
+make DESTDIR\= sitearchdir\=./.gem.20250519-28589-wn1g6l sitelibdir\=./.gem.20250519-28589-wn1g6l clean
+make: *** No rule to make target 'clean'.  Stop.
+
+current directory: /home/travis/.rvm/rubies/ruby-3.4.4/lib/ruby/gems/3.4.0/gems/executable-hooks-1.7.1/ext/wrapper_installer
+make DESTDIR\= sitearchdir\=./.gem.20250519-28589-wn1g6l sitelibdir\=./.gem.20250519-28589-wn1g6l
+make: Nothing to be done for 'all'.
+
+current directory: /home/travis/.rvm/rubies/ruby-3.4.4/lib/ruby/gems/3.4.0/gems/executable-hooks-1.7.1/ext/wrapper_installer
+make DESTDIR\= sitearchdir\=./.gem.20250519-28589-wn1g6l sitelibdir\=./.gem.20250519-28589-wn1g6l install
+make: Nothing to be done for 'install'.
+
+current directory: /home/travis/.rvm/rubies/ruby-3.4.4/lib/ruby/gems/3.4.0/gems/executable-hooks-1.7.1/ext/wrapper_installer
+make DESTDIR\= sitearchdir\=./.gem.20250519-28589-wn1g6l sitelibdir\=./.gem.20250519-28589-wn1g6l clean
+make: *** No rule to make target 'clean'.  Stop.

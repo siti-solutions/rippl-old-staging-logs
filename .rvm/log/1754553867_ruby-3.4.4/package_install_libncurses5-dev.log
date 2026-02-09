@@ -1,0 +1,41 @@
+[2025-08-07 08:04:29] requirements_debian_libs_install
+requirements_debian_libs_install () 
+{ 
+    __rvm_try_sudo apt-get --no-install-recommends --yes install "$@" || return $?
+}
+current path: /home/ubuntu
+GEM_PATH=/home/ubuntu/.rvm/gems/ruby-3.2.2:/home/ubuntu/.rvm/gems/ruby-3.2.2@global
+GEM_HOME=/home/ubuntu/.rvm/gems/ruby-3.2.2
+PATH=/home/ubuntu/.rvm/gems/ruby-3.2.2/bin:/home/ubuntu/.rvm/gems/ruby-3.2.2@global/bin:/home/ubuntu/.rvm/rubies/ruby-3.2.2/bin:/home/ubuntu/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+command(2): requirements_debian_libs_install libncurses5-dev
+++ __rvm_try_sudo apt-get --no-install-recommends --yes install libncurses5-dev
+++ typeset -a command_to_run
+++ typeset sudo_path sbin_path missing_paths
+++ command_to_run=("$@")
+++ ((  UID == 0  ))
+++ case "$rvm_autolibs_flag_number" in
+++ is_a_function __rvm_sudo
+++ typeset -f __rvm_sudo
+++ missing_paths=
+++ for sbin_path in /sbin /usr/sbin /usr/local/sbin
+++ [[ -d /sbin ]]
+++ [[ :/home/ubuntu/.rvm/gems/ruby-3.2.2/bin:/home/ubuntu/.rvm/gems/ruby-3.2.2@global/bin:/home/ubuntu/.rvm/rubies/ruby-3.2.2/bin:/home/ubuntu/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin: != *\:\/\s\b\i\n\:* ]]
+++ for sbin_path in /sbin /usr/sbin /usr/local/sbin
+++ [[ -d /usr/sbin ]]
+++ [[ :/home/ubuntu/.rvm/gems/ruby-3.2.2/bin:/home/ubuntu/.rvm/gems/ruby-3.2.2@global/bin:/home/ubuntu/.rvm/rubies/ruby-3.2.2/bin:/home/ubuntu/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin: != *\:\/\u\s\r\/\s\b\i\n\:* ]]
+++ for sbin_path in /sbin /usr/sbin /usr/local/sbin
+++ [[ -d /usr/local/sbin ]]
+++ [[ :/home/ubuntu/.rvm/gems/ruby-3.2.2/bin:/home/ubuntu/.rvm/gems/ruby-3.2.2@global/bin:/home/ubuntu/.rvm/rubies/ruby-3.2.2/bin:/home/ubuntu/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin: != *\:\/\u\s\r\/\l\o\c\a\l\/\s\b\i\n\:* ]]
+++ [[ -n '' ]]
+++ command_to_run=(__rvm_sudo -p "%p password required for '$*': " "${command_to_run[@]}")
+++ __rvm_sudo -p '%p password required for '\''apt-get --no-install-recommends --yes install libncurses5-dev'\'': ' apt-get --no-install-recommends --yes install libncurses5-dev
+++ command sudo -p '%p password required for '\''apt-get --no-install-recommends --yes install libncurses5-dev'\'': ' apt-get --no-install-recommends --yes install libncurses5-dev
+Reading package lists...
+Building dependency tree...
+Reading state information...
+libncurses-dev is already the newest version (6.4+20240113-1ubuntu2).
+The following packages were automatically installed and are no longer required:
+  libcares2 node-busboy node-cjs-module-lexer node-undici node-xtend
+  python3-cliapp python3-markdown python3-ttystatus python3-zombie-imp
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.

@@ -1,0 +1,8 @@
+---
+0.1.0 rails:>= 7.1,solid_queue:>= 0.1.0|checksum:226e8394e187e2353890e6341c5e7c4bd2f6deeee527b9819b0bf73f2baec496,ruby:>= 3.1.6
+0.1.1 rails:>= 7.1,solid_queue:>= 0.1.0|checksum:b97e171f11d29be143a27605227437d25e8f2360b0c8f89af7b4d55adca8a750,ruby:>= 3.1.6
+0.1.2 rails:>= 7.1,solid_queue:>= 0.1.0|checksum:d3fa052bf5fcc08431f80996636bbed1964524ff6b13bba54ecaefc68502354e,ruby:>= 3.1.6
+0.2.0 rails:>= 7.1,solid_queue:>= 0.1.0|checksum:439cea11ec2e132393651884e2508a2a1814be29f5d753a681e0651c3a5e9e44,ruby:>= 3.1.6
+0.3.0 rails:>= 7.0,solid_queue:>= 0.1.0|checksum:e893e8c7ec9208500cd615f9c1c5da428c44a8fd0f3d11bd44e46c559efc7fad,ruby:>= 3.0.0
+0.3.1 rails:>= 7.0,solid_queue:>= 0.1.0|checksum:98163b23e52c1e259c93a254eda241a391d380a0291eb7639c1e9b5a49f6bca6,ruby:>= 3.0.0
+0.3.2 rails:>= 7.0,solid_queue:>= 0.1.0|checksum:183af63d3ce1fa5efeb5e2bb62a063443e90532102db6c6d6e697dcb75cb7573,ruby:>= 3.0.0

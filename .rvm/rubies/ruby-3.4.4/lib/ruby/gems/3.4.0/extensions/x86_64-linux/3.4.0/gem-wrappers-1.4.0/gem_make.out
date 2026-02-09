@@ -1,0 +1,18 @@
+current directory: /home/travis/.rvm/rubies/ruby-3.4.4/lib/ruby/gems/3.4.0/gems/gem-wrappers-1.4.0/ext/wrapper_generator
+/home/travis/.rvm/rubies/ruby-3.4.4/bin/ruby extconf.rb
+
+current directory: /home/travis/.rvm/rubies/ruby-3.4.4/lib/ruby/gems/3.4.0/gems/gem-wrappers-1.4.0/ext/wrapper_generator
+make DESTDIR\= sitearchdir\=./.gem.20250519-28543-v5vfpd sitelibdir\=./.gem.20250519-28543-v5vfpd clean
+make: *** No rule to make target 'clean'.  Stop.
+
+current directory: /home/travis/.rvm/rubies/ruby-3.4.4/lib/ruby/gems/3.4.0/gems/gem-wrappers-1.4.0/ext/wrapper_generator
+make DESTDIR\= sitearchdir\=./.gem.20250519-28543-v5vfpd sitelibdir\=./.gem.20250519-28543-v5vfpd
+make: Nothing to be done for 'all'.
+
+current directory: /home/travis/.rvm/rubies/ruby-3.4.4/lib/ruby/gems/3.4.0/gems/gem-wrappers-1.4.0/ext/wrapper_generator
+make DESTDIR\= sitearchdir\=./.gem.20250519-28543-v5vfpd sitelibdir\=./.gem.20250519-28543-v5vfpd install
+make: Nothing to be done for 'install'.
+
+current directory: /home/travis/.rvm/rubies/ruby-3.4.4/lib/ruby/gems/3.4.0/gems/gem-wrappers-1.4.0/ext/wrapper_generator
+make DESTDIR\= sitearchdir\=./.gem.20250519-28543-v5vfpd sitelibdir\=./.gem.20250519-28543-v5vfpd clean
+make: *** No rule to make target 'clean'.  Stop.
